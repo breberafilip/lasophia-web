@@ -1,0 +1,36 @@
+$tablet: 680px !default
+$desktop: 1020px !default
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=miniHeight
+  @media screen and (max-height: 780px) and (min-width: 500px) 
+    @content
+
+
+=tablet
+  @media screen and (max-width: $desktop - 1px)
+    @content
+
+
+=desktop
+  @media screen and (min-width: $desktop) and (max-height: 999px) 
+    @content
+
+=maxiHeight
+  @media screen and (min-height: 1000px) 
+    @content
+
+=maxiWidth
+  @media screen and (min-width: 1500px) 
+    @content
+
+=microWidth
+  @media screen and (max-width: 300px) 
+    @content
+
+=microHeight
+  @media screen and (max-height: 300px) 
+    @content

@@ -1,0 +1,81 @@
+{
+  "hosting": {
+    "site": "lasophia",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/prihlasky-2",
+        "destination": "/prihlaska",
+        "type": 301
+      },
+      {
+        "source": "/o-nas",
+        "destination": "/nadace",
+        "type": 301
+      },
+      {
+        "source": "/novinky",
+        "destination": "/blog",
+        "type": 301
+      },
+      {
+        "source": "/talent-la-sophia",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/kontakt",
+        "destination": "/",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=365000000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=365000000"
+          }
+        ]
+      },
+      {
+        "source": "sw.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(png|jpg|webp|svg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=365000000"
+          }
+        ]
+      }
+    ]
+  }
+}
